@@ -1,0 +1,1848 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf8f4;
+    overflow-x:hidden;
+}
+
+/* =========================
+   MUSIC SCREEN
+========================= */
+
+#music-start{
+    position:fixed;
+    inset:0;
+
+    z-index:999999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(15px);
+
+    background:
+    rgba(0,0,0,.35);
+}
+
+#startBtn{
+    width:190px;
+    height:58px;
+
+    border:none;
+    border-radius:100px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #E8D6B0,
+    #C9A86A
+    );
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+/* =========================
+   COVER
+========================= */
+
+.cover{
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.cover::before{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.05)
+    ),
+    url("TikVideo.App_7602958458500959508_10.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    transform:scale(1.05);
+
+    filter:
+    brightness(.95)
+    contrast(1.08)
+    saturate(1.1);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(20,15,10,.15),
+    rgba(20,15,10,.55)
+    );
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.cover-content{
+    position:relative;
+    z-index:2;
+
+    width:90%;
+    max-width:380px;
+
+    text-align:center;
+
+    color:white;
+
+    padding:30px 20px;
+}
+
+/* =========================
+   ORNAMENT
+========================= */
+
+.ornament-top,
+.ornament-bottom{
+    width:130px;
+    height:2px;
+
+    margin:auto;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #E8D6B0,
+    #C9A86A,
+    #E8D6B0,
+    transparent
+    );
+}
+
+.ornament-top{
+    margin-bottom:25px;
+}
+
+.ornament-bottom{
+    margin-top:25px;
+}
+
+/* =========================
+   BISMILLAH
+========================= */
+
+.bismillah{
+    font-size:26px;
+
+    color:#F8EED2;
+
+    margin-bottom:25px;
+
+    line-height:1.8;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.25);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.wedding-text{
+    font-size:10px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:#F7EFD7;
+
+    margin-bottom:15px;
+}
+
+h1{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:50px;
+    font-weight:500;
+
+    line-height:1.15;
+}
+
+h1 span{
+    display:block;
+
+    margin:8px 0;
+
+    color:#E8D6B0;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.25);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider{
+    width:80px;
+    height:1px;
+
+    margin:22px auto;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #E8D6B0,
+    transparent
+    );
+}
+
+/* =========================
+   GUEST
+========================= */
+
+.guest{
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+}
+
+.guest p{
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#F5EED9;
+
+    margin-bottom:8px;
+}
+
+.guest h3{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+    font-weight:500;
+
+    color:white;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.open-btn{
+    width:100%;
+    height:58px;
+
+    margin-top:30px;
+
+    border:none;
+    border-radius:100px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #E8D6B0,
+    #C9A86A
+    );
+
+    box-shadow:
+    0 10px 25px rgba(201,168,106,.25);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .cover-content{
+        width:92%;
+    }
+
+    .bismillah{
+        font-size:23px;
+    }
+
+    h1{
+        font-size:44px;
+    }
+
+    .guest h3{
+        font-size:20px;
+    }
+
+    .open-btn{
+        height:55px;
+    }
+}
+/* ========================= */
+/* HOME / SAMBUTAN */
+/* ========================= */
+
+.home{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 25px;
+}
+/* FOTO MEMPELAI */
+
+.home-bg{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* OVERLAY */
+
+.home-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(15,10,5,.75),
+    rgba(15,10,5,.35),
+    rgba(15,10,5,.15)
+    );
+}
+
+/* CONTENT */
+
+.home-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:420px;
+
+    text-align:center;
+
+    color:#F7F0DC;
+
+    text-shadow:
+    0 2px 12px rgba(0,0,0,.45);
+}
+
+/* HEADING KECIL */
+
+.home-small{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+    opacity:.9;
+}
+
+/* ASSALAMUALAIKUM */
+
+.home-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+}
+
+/* GARIS */
+
+.home-line{
+
+    width:80px;
+    height:1px;
+
+    margin:22px auto;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #E8D6B0,
+    transparent
+    );
+}
+
+/* PEMBUKA */
+
+.home-intro{
+
+    font-size:13px;
+
+    line-height:28px;
+
+    margin-bottom:25px;
+}
+
+/* AYAT ARAB */
+
+.home-arab{
+
+    font-size:20px;
+
+    line-height:2.1;
+
+    margin-bottom:20px;
+
+    color:#F8EED2;
+}
+
+/* TERJEMAHAN */
+
+.quran-text{
+
+    font-size:13px;
+
+    line-height:28px;
+
+    font-style:italic;
+
+    margin-bottom:15px;
+}
+
+/* SUMBER */
+
+.quran-source{
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    color:#E8D6B0;
+}
+
+/* TEKS UNDANGAN */
+
+.home-invite{
+
+    font-size:13px;
+
+    line-height:28px;
+}
+
+/* MOBILE */
+
+@media(max-width:430px){
+
+    .home{
+
+        padding:50px 20px;
+    }
+
+    .home-content{
+
+        max-width:360px;
+    }
+
+    .home-content h2{
+
+        font-size:30px;
+    }
+
+    .home-arab{
+
+        font-size:18px;
+    }
+
+    .home-intro,
+    .quran-text,
+    .home-invite{
+
+        font-size:12px;
+
+        line-height:26px;
+    }
+
+}
+
+/* ========================= */
+/* AKAD & RESEPSI */
+/* ========================= */
+
+.event{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:80px 25px;
+}
+
+.event-bg{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.event-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(15,10,5,.35),
+    rgba(15,10,5,.75)
+    );
+}
+
+.event-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+    max-width:420px;
+
+    text-align:center;
+
+    color:#F8F1DE;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.35);
+}
+
+.event-small{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    margin-bottom:12px;
+}
+
+.event h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+}
+
+.event-line{
+
+    width:80px;
+    height:1px;
+
+    background:#E8D6B0;
+
+    margin:25px auto;
+}
+
+.event-card{
+
+    margin-bottom:35px;
+}
+
+.event-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.event-date{
+
+    font-size:15px;
+
+    line-height:28px;
+}
+
+.event-time{
+
+    font-size:16px;
+
+    margin:10px 0;
+}
+
+.event-location{
+
+    font-size:14px;
+
+    line-height:28px;
+}
+
+.maps-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:220px;
+    height:55px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #E8D6B0,
+    #C9A86A
+    );
+
+    margin-top:15px;
+}
+
+.couple{
+
+    padding:90px 25px;
+
+    background:#faf8f4;
+}
+
+.couple-subtitle{
+
+    text-align:center;
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#C9A86A;
+}
+
+.couple h2{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:44px;
+
+    color:#8B6B3F;
+
+    margin:15px 0 50px;
+}
+
+.couple-box{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.06);
+
+    margin-bottom:30px;
+}
+
+.couple-img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+}
+
+.couple-info{
+
+    padding:30px;
+    text-align:center;
+}
+
+.couple-info h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#8B6B3F;
+
+    margin-bottom:10px;
+}
+
+.couple-info span{
+
+    display:block;
+
+    color:#C9A86A;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+}
+
+.couple-info p{
+
+    line-height:28px;
+
+    color:#666;
+}
+
+.couple-center{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#C9A86A;
+
+    margin:10px 0 40px;
+}
+
+/* ========================= */
+/* KISAH KAMI */
+/* ========================= */
+
+.story{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:90px 25px;
+
+    overflow:hidden;
+}
+
+.story-bg{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.story-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(15,10,5,.45),
+    rgba(15,10,5,.80)
+    );
+}
+
+.story-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:500px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#F8F1DE;
+}
+
+.story-subtitle{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    margin-bottom:12px;
+}
+
+.story h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:46px;
+
+    font-weight:500;
+}
+
+.story-line{
+
+    width:80px;
+    height:1px;
+
+    background:#E8D6B0;
+
+    margin:25px auto 45px;
+}
+
+.story-card{
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,.10);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    margin-bottom:25px;
+}
+
+.story-card span{
+
+    display:block;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    color:#E8D6B0;
+
+    margin-bottom:15px;
+}
+
+.story-card p{
+
+    font-size:14px;
+
+    line-height:30px;
+}
+
+.story-dot{
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#E8D6B0;
+
+    margin:0 auto 25px;
+}
+
+@media(max-width:430px){
+
+    .story h2{
+
+        font-size:38px;
+    }
+
+    .story-card{
+
+        padding:22px;
+    }
+
+    .story-card span{
+
+        font-size:24px;
+    }
+
+    .story-card p{
+
+        font-size:13px;
+
+        line-height:28px;
+    }
+
+}
+
+/* ========================= */
+/* GALERI PREWEDDING */
+/* ========================= */
+
+.gallery{
+
+    padding:90px 20px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #faf8f4,
+    #f5efe3
+    );
+
+    text-align:center;
+}
+
+.gallery-subtitle{
+
+    font-size:10px;
+
+    letter-spacing:6px;
+
+    color:#C9A86A;
+
+    margin-bottom:10px;
+}
+
+.gallery h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    font-weight:500;
+
+    color:#8B6B3F;
+
+    margin-bottom:25px;
+}
+
+.gallery-line{
+
+    width:90px;
+    height:1px;
+
+    margin:0 auto 50px;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #C9A86A,
+    transparent
+    );
+}
+
+/* GRID FOTO */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    max-width:500px;
+
+    margin:auto;
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    display:block;
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.gallery-grid img:hover{
+
+    transform:
+    scale(1.03);
+}
+
+/* MOBILE */
+
+@media(max-width:430px){
+
+    .gallery{
+
+        padding:80px 18px;
+    }
+
+    .gallery h2{
+
+        font-size:40px;
+    }
+
+    .gallery-grid{
+
+        gap:10px;
+    }
+
+    .gallery-grid img{
+
+        height:190px;
+
+        border-radius:18px;
+    }
+
+}
+
+.family{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:90px 25px;
+}
+
+.family-bg{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.family-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(15,10,5,.45),
+    rgba(15,10,5,.80)
+    );
+}
+
+.family-content{
+
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:500px;
+
+    text-align:center;
+
+    color:#F8F1DE;
+}
+
+.family-subtitle{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    margin-bottom:10px;
+}
+
+.family h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:46px;
+
+    margin-bottom:25px;
+}
+
+.family-line{
+
+    width:80px;
+    height:1px;
+
+    background:#E8D6B0;
+
+    margin:0 auto 40px;
+}
+
+.family-card{
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+}
+
+.family-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    color:#E8D6B0;
+
+    margin-bottom:10px;
+}
+
+.family-parent{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+    opacity:.85;
+}
+
+.family-card ul{
+
+    list-style:none;
+}
+
+.family-card li{
+
+    line-height:34px;
+
+    font-size:14px;
+}
+
+.family-symbol{
+
+    font-size:40px;
+
+    color:#E8D6B0;
+
+    margin-bottom:25px;
+}
+
+@media(max-width:430px){
+
+    .family h2{
+
+        font-size:38px;
+    }
+
+    .family-card h3{
+
+        font-size:24px;
+    }
+
+}
+
+/* ========================= */
+/* DOA & TANDA KASIH */
+/* ========================= */
+
+.gift{
+
+
+position:relative;
+
+min-height:100vh;
+
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:90px 20px;
+
+
+}
+
+.gift-bg{
+
+
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+
+}
+
+.gift-overlay{
+
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+rgba(15,10,5,.40),
+rgba(15,10,5,.85)
+);
+
+
+}
+
+.gift-content{
+
+
+position:relative;
+z-index:2;
+
+width:100%;
+max-width:430px;
+
+text-align:center;
+
+color:#F8F1DE;
+
+
+}
+
+.gift-subtitle{
+
+
+font-size:10px;
+
+letter-spacing:5px;
+
+color:#E8D6B0;
+
+margin-bottom:10px;
+
+
+}
+
+.gift h2{
+
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:42px;
+
+font-weight:500;
+
+margin-bottom:20px;
+
+
+}
+
+.gift-line{
+
+
+width:80px;
+height:1px;
+
+margin:25px auto;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#E8D6B0,
+transparent
+);
+
+
+}
+
+.gift-text{
+
+
+font-size:14px;
+
+line-height:30px;
+
+margin-bottom:30px;
+
+
+}
+
+.qris-card{
+
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.12);
+
+border-radius:28px;
+
+padding:25px;
+
+}
+
+.qris-img{
+
+
+width:100%;
+
+max-width:340px;
+
+display:block;
+
+margin:auto;
+
+}
+
+.qris-note{
+
+
+margin-top:20px;
+
+font-size:12px;
+
+line-height:24px;
+
+
+}
+
+.download-qris{
+
+
+display:inline-flex;
+
+justify-content:center;
+align-items:center;
+
+width:220px;
+height:55px;
+
+margin-top:25px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+color:white;
+
+font-size:12px;
+
+letter-spacing:3px;
+
+background:
+linear-gradient(
+135deg,
+#E8D6B0,
+#C9A86A
+);
+
+box-shadow:
+0 10px 25px rgba(201,168,106,.25);
+
+
+}
+
+@media(max-width:430px){
+
+
+.gift h2{
+
+    font-size:34px;
+}
+
+.gift-text{
+
+    font-size:13px;
+
+    line-height:28px;
+}
+
+.qris-img{
+
+    max-width:300px;
+}
+
+
+}
+
+/* ========================= */
+/* SECTION TERAKHIR */
+/* TERIMA KASIH */
+/* ========================= */
+
+.thanks{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 25px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #faf8f4,
+    #f5efe3
+    );
+}
+
+.thanks-content{
+
+    text-align:center;
+
+    max-width:400px;
+}
+
+.thanks-subtitle{
+
+    font-size:10px;
+
+    letter-spacing:6px;
+
+    color:#C9A86A;
+
+    margin-bottom:10px;
+}
+
+.thanks h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:56px;
+
+    font-weight:500;
+
+    color:#8B6B3F;
+}
+
+.thanks-line{
+
+    width:90px;
+    height:1px;
+
+    margin:25px auto;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #C9A86A,
+    transparent
+    );
+}
+
+.thanks-text{
+
+    font-size:14px;
+
+    line-height:30px;
+
+    color:#6E5A3A;
+
+    margin-bottom:30px;
+}
+
+.thanks h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    color:#C9A86A;
+}
+
+@media(max-width:430px){
+
+    .thanks h2{
+
+        font-size:46px;
+    }
+
+    .thanks h3{
+
+        font-size:34px;
+    }
+
+}
+/* ========================= */
+/* SECTION 6 */
+/* UCAPAN & DOA */
+/* ========================= */
+
+.wish-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    padding:90px 20px;
+}
+
+/* BG */
+
+.wish-bg{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* OVERLAY */
+
+.wish-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(15,10,5,.45),
+    rgba(15,10,5,.85)
+    );
+}
+
+/* CONTENT */
+
+.wish-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:500px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#F8F1DE;
+}
+
+/* SUBTITLE */
+
+.wish-subtitle{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#E8D6B0;
+
+    margin-bottom:10px;
+}
+
+/* TITLE */
+
+.wish-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+}
+
+/* LINE */
+
+.wish-line{
+
+    width:80px;
+    height:1px;
+
+    margin:25px auto;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #E8D6B0,
+    transparent
+    );
+}
+
+/* DESC */
+
+.wish-desc{
+
+    font-size:14px;
+
+    line-height:30px;
+
+    margin-bottom:35px;
+}
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+
+.wish-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-bottom:40px;
+}
+
+.wish-form input,
+.wish-form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,.10);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+    border:
+    1px solid rgba(255,255,255,.12);
+}
+
+.wish-form input::placeholder,
+.wish-form textarea::placeholder{
+
+    color:
+    rgba(255,255,255,.7);
+}
+
+.wish-form textarea{
+
+    height:140px;
+
+    resize:none;
+}
+
+/* BUTTON */
+
+#wishSubmit,
+#kirimUcapan{
+
+    height:58px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #E8D6B0,
+    #C9A86A
+    );
+
+    box-shadow:
+    0 10px 25px rgba(201,168,106,.25);
+}
+
+/* ========================= */
+/* LIST UCAPAN */
+/* ========================= */
+
+.wish-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#F8F1DE;
+
+    margin-bottom:25px;
+}
+
+.wish-card{
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    padding:22px;
+
+    text-align:left;
+
+    margin-bottom:15px;
+}
+
+.wish-card h4{
+
+    color:#E8D6B0;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+}
+
+.wish-card p{
+
+    color:#F8F1DE;
+
+    line-height:28px;
+
+    font-size:14px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:430px){
+
+    .wish-section{
+
+        padding:80px 18px;
+    }
+
+    .wish-content h2{
+
+        font-size:36px;
+    }
+
+    .wish-desc{
+
+        font-size:13px;
+
+        line-height:28px;
+    }
+
+    .wish-title{
+
+        font-size:30px;
+    }
+
+}
+#website{
+    display:none;
+}
